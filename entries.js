@@ -65,12 +65,11 @@ const entries = [
 
   {
     date: "2026-07-03",
-    title: "Why I'm doing this in public",
+    title: "Why I'm making this diary",
     body: `
       I thought about keeping this private, but writing for
-      an audience — even a tiny one — keeps me honest. It's
-      easy to convince yourself of things quietly. Harder to
-      write them down and stand by them next week.
+      an audience is fun and I've learned a great deal thanks to
+      other blogs.
 
       So: short entries, roughly every few days, in plain
       language. No hype, no signals, just a diary.
