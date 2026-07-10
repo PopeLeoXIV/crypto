@@ -1,0 +1,202 @@
+/* ============================================
+   Diary of a Crypto Guy — stylesheet
+   Palette, type, and layout tokens live here.
+   Change the values in :root to re-theme the
+   whole site from one place.
+   ============================================ */
+
+:root {
+  /* colour */
+  --paper:      #ece3d0;   /* page background */
+  --paper-deep: #e0d3b4;   /* dividers, stamp fill */
+  --ink:        #33291c;   /* primary text */
+  --ink-soft:   #6f634e;   /* secondary text */
+  --rule:       #c6b78e;   /* hairline rules */
+  --accent:     #7a5c3e;   /* stamps, links, hover */
+
+  /* type */
+  --font-display: "Caudex", Georgia, serif;
+  --font-body: "Literata", Georgia, serif;
+
+  /* layout */
+  --content-width: 640px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+
+  /* very faint paper grain, so it doesn't read as a flat AI gradient */
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(51,41,28,0.025) 0, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(51,41,28,0.02) 0, transparent 45%);
+}
+
+.page {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem 6rem;
+
+  /* a notebook binding: a dashed rule with punched holes down the left */
+  border-left: 1px dashed var(--rule);
+  position: relative;
+}
+
+.page::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 0;
+  bottom: 0;
+  width: 11px;
+  background-image: radial-gradient(circle, var(--paper) 3px, transparent 3.2px);
+  background-size: 11px 46px;
+  background-repeat: repeat-y;
+}
+
+/* ---------- masthead ---------- */
+
+.masthead { text-align: left; }
+
+.masthead__eyebrow {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.9rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.masthead__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 5vw, 3.1rem);
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+
+.masthead__tagline {
+  max-width: 34em;
+  margin: 0.9rem 0 0;
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+}
+
+.rule {
+  margin: 2.2rem 0 2.6rem;
+  border: none;
+  border-top: 1px solid var(--rule);
+}
+
+/* ---------- entries ---------- */
+
+.entries {
+  display: flex;
+  flex-direction: column;
+}
+
+.entry {
+  padding-bottom: 2.6rem;
+}
+
+.entry__date {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--paper-deep);
+  padding: 0.22rem 0.6rem;
+  border-radius: 1px;
+  transform: rotate(-1.2deg);
+  margin-bottom: 0.9rem;
+}
+
+.entry__title {
+  margin: 0 0 0.8rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.55rem;
+  line-height: 1.3;
+  color: var(--ink);
+}
+
+.entry__body p {
+  margin: 0 0 1rem;
+  color: var(--ink);
+}
+
+.entry__body p:last-child { margin-bottom: 0; }
+
+.entry__body a {
+  color: var(--accent);
+  text-decoration: none;
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  padding-bottom: 1px;
+}
+.entry__body a:hover { background-size: 100% 2px; }
+
+/* hand-drawn divider between entries — a pen-stroke squiggle, not a straight rule */
+.squiggle {
+  display: block;
+  width: 90px;
+  height: 14px;
+  margin: 0.4rem 0 2.2rem;
+  color: var(--rule);
+}
+
+/* ---------- footer ---------- */
+
+.footer {
+  margin-top: 1rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+.footer p { margin: 0; }
+
+/* ---------- empty state ---------- */
+
+.empty-note {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+/* ---------- small screens ---------- */
+
+@media (max-width: 480px) {
+  .page { padding: 3.5rem 1.1rem 4.5rem 1.7rem; }
+  body { font-size: 17px; }
+}
+
+/* ---------- accessibility ---------- */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; }
+}
