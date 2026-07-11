@@ -33,6 +33,16 @@
       .join("");
   }
 
+  // A small hand-drawn pen-stroke, slightly different each render so it
+  // never feels like a stamped-out template element.
+  function squiggle() {
+    const wobble = () => (Math.random() * 4 - 2).toFixed(1);
+    return `
+      <svg class="squiggle" viewBox="0 0 90 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M2 7 C 16 ${2 + wobble()}, 26 ${12 + wobble()}, 40 7 S 64 ${1 + wobble()}, 88 7"
+          stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>`;
+  }
 
   const html = entries
     .map((entry, i) => {
