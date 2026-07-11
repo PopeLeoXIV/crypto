@@ -30,19 +30,13 @@
 const entries = [
 
   {
-    date: "2026-07-10",
-    title: "Where I'm starting from",
+    date: "2026-07-11",
+    title: "Bitcoin going up",
     body: `
-      I've decided to actually write this down instead of just
-      reading threads and forgetting everything by the weekend.
-      This is going to be a running notebook — not polished
-      advice, just what I'm learning, what I'm buying, and what
-      I get wrong along the way.
-
-      Today I'm starting simple: a small amount into Bitcoin and
-      Ethereum, nothing I can't afford to lose, mostly so I have
-      skin in the game while I learn how wallets, exchanges, and
-      custody actually work.
+      In a quite interesting turn of events, it seems like BTC is going up after a long period of dropping steadily.
+      I'm kind of annoyed because I wanted to buy in and consolidate my portfolio today. I've seen some people 
+      saying that it may reach $70k, but I think it'll dip again, at which point I'll consider investing more.
+      
     `
   },
   
@@ -52,10 +46,7 @@ const entries = [
     body: `
       I've decided to actually write this down instead of just
       reading threads and forgetting everything by the weekend.
-      This is going to be a running notebook — not polished
-      advice, just what I'm learning, what I'm buying, and what
-      I get wrong along the way.
-
+      This is going to be a running notebook.
       Today I'm starting simple: a small amount into Bitcoin and
       Ethereum, nothing I can't afford to lose, mostly so I have
       skin in the game while I learn how wallets, exchanges, and
