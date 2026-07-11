@@ -152,14 +152,6 @@ body {
 }
 .entry__body a:hover { background-size: 100% 2px; }
 
-/* hand-drawn divider between entries — a pen-stroke squiggle, not a straight rule */
-.squiggle {
-  display: block;
-  width: 90px;
-  height: 14px;
-  margin: 0.4rem 0 2.2rem;
-  color: var(--rule);
-}
 
 /* ---------- footer ---------- */
 
