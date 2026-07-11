@@ -47,6 +47,7 @@ const entries = [
       I've decided to actually write this down instead of just
       reading threads and forgetting everything by the weekend.
       This is going to be a running notebook.
+      
       Today I'm starting simple: a small amount into Bitcoin and
       Ethereum, nothing I can't afford to lose, mostly so I have
       skin in the game while I learn how wallets, exchanges, and
